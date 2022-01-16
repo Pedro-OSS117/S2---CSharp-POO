@@ -1,0 +1,63 @@
+================== Règles =====================
+A Rendre dans un dossier DM dans le dossier 00_-_Les_Pointeurs de votre Git.
+Doit être sur vos GitHub avant 10h Lundi 25 Janvier sinon 0.
+-0.2 points à chaque erreur de nomenclature.
+0 sur l'exo si le programme ne compile pas.
+
+Attention : Commentez vos lignes de codes au maximum en respectant la nomenclature des commentaires (points en moins si pas de commentaire).
+
+Attention 2 : Pour un projet avec des pointeurs, ne pas oublier d'ajouter :
+- dans le .cproj de votre projet, la balise suivante : <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+- de mettre 'unsafe' devant votre Class Program (s'inspirer de mes projets)
+
+================== Exo 1 - Char Pointer =====================
+
+1) Creer les variables suivantes ;
+- un char caractere1 intialisé avec 'O'
+- un char caractere2 intialisé avec 'A'
+- un pointeur de type char qui reference la variable caractere1
+- un pointeur de type char qui reference la variable caractere2
+
+2) Creer une fonction qui prend deux pointeurs de type char en entrée.
+La fonction doit copier la valeur de la variable pointée par le premier pointeur dans la variable pointée par le deuxième.
+
+3) Appeler la fonction avec comme paramètres les deux pointeurs déclarés dans 1).
+
+4) Afficher les valeurs de caractere1 et caractere2 via les pointeurs.
+Le résultat doit être 'O' et 'O'.
+
+
+===================== Exo 2 - Boss And Player =====================
+
+1) Creer une structure Boss ayant les propriétés suivantes :
+- une vie sous forme d'entier (si la vie tombe à zero il est mort).
+- une protection (float) qui sera un multiplicateur des dégats reçus.
+
+2) La structure doit avoir un constructeur permettant de setter ces propriétés.
+
+3) Dans la structure Boss, creer une fonction qui verifie si le boss est mort.
+
+4) Dans la structure Boss, creer une fonction qui permet d'attribuer des dégats au boss.
+Appliquer les degats en fonction de s'il n'est pas mort et de sa protection (on multiplie les degats par la protection).
+Cette fonction doit être public.
+Cette fonction retourne le nombre réél de degats appliqués.
+
+5) Dans la structure Boss, créer une fonction qui affiche l'état du boss (vie et protection)
+
+6) Creer une structure Player ayant les propriétés suivantes :
+- un nom
+- un nombre de dégats
+- un pointeur de type Boss
+
+7) Dans la structure Player, creer une constructeur qui permet de setter ces propriétés.
+
+8) Dans la structure Player, creer une fonction 'Attack' qui permet d'appliquer des dégats au Boss pointé par la propriété de type pointeur.
+La fonction utilise les dégats de la propriété de la structure.
+La fonction affiche à chaque attaque : "Le Player {NomPlayer} a blessé le Boss de {dégats}".
+
+9) Utiliser ces deux structures pour faire un programme qui :
+- Creer une variable de type Boss.
+- Creer deux variables de type Player avec des dégats differents, et qui ont leur propriétés de pointeur Boss pointant la variable Boss créée juste avant.
+- Appliquer plusieurs fois les degats via les variables de type player.
+- Terminer le programme en affichant l'état du Boss après l'application des attaques.
+
