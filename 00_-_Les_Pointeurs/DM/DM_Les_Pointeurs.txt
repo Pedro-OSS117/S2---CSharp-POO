@@ -1,5 +1,5 @@
 ================== Règles =====================
-A Rendre dans un dossier DM dans le dossier 00_-_Les_Pointeurs de votre Git.
+A Rendre dans un dossier DM dans le dossier 10 - Les_Pointeurs de votre Git.
 Doit être sur vos GitHub avant 10h Lundi 25 Janvier sinon 0.
 -0.2 points à chaque erreur de nomenclature.
 0 sur l'exo si le programme ne compile pas.
@@ -12,7 +12,7 @@ Attention 2 : Pour un projet avec des pointeurs, ne pas oublier d'ajouter :
 
 ================== Exo 1 - Char Pointer =====================
 
-1) Creer les variables suivantes ;
+1) Creer les variables suivantes :
 - un char caractere1 intialisé avec 'O'
 - un char caractere2 intialisé avec 'A'
 - un pointeur de type char qui reference la variable caractere1
