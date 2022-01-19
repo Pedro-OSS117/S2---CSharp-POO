@@ -157,10 +157,10 @@ Console.WriteLine($"Adresse de i : {(long)p1});
 ### Structure et Pointeur
 
 ```csharp
-// Declaration d'une variable de type MyPoint 
-MyPoint point = new Point(1,2);
+// Declaration d'une variable de type Point 
+Point point = new Point(1,2);
 // Declaration d'une pointeur sur la varible
-MyPoint* pointer = &point;
+Point* pointer = &point;
 // Accès à la propriété via l'operateur '->' à la place du '.'
 pointer->x = 3;
 ```
