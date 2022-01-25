@@ -13,7 +13,7 @@ Exo 1
 4) Modifier les variables via les pointeurs et afficher les nouvelles valeurs
 
 5) Ecrire une fonction qui prend en paramètre deux pointeurs de type int.
-La fonction doit assigner la valeur de la variable pointé par le premier pointeur
+La fonction doit assigner la valeur de la variable pointée par le premier pointeur
 à la seconde variable pointé par le second pointeur.
 
 Appeler la fonction avec le pointeur sur myValue, et un pointeur sur le premier élément du tableau.
@@ -24,9 +24,7 @@ Exo 2
 Ajouter à la structure une propriété public amount de type float 
 
 2) Creer une structure MemberFamily. 
-Ajouter à la structure une propriété :
-- private account, 
-- un pointeur de type FamilyAccount
+Ajouter à la structure une propriété : private account, un pointeur de type FamilyAccount
 
 3) Creer le constructeur de la structure MemberFamily 
 
