@@ -1,0 +1,111 @@
+================== Règles =====================
+A Rendre dans un dossier DM dans le dossier 01_-_Les_Classes de votre Git.
+Doit être sur vos GitHub avant 10h Mardi 09 Janvier sinon 0.
+points en moins à chaque erreur de nomenclature.
+Non Acquis sur l'exo si le programme ne compile pas.
+
+Attention : Commentez vos lignes de codes au maximum en respectant la nomenclature des commentaires (beaucoup de points en moins si pas de commentaires).
+
+Notes :
+- tout le DM se fait dans le même programme.
+- aucune des propriétés du programme ne doient être public.
+- pour accèder aux propriétés, penser à faire des accesseurs.
+- Attention de bien gérer les cas où il pourrait y avoir des erreurs.
+
+Gestion D'un parking
+
+====== I ) Créer une classe Car
+
+a) Ajouter les proriétés suivantes ;
+- nom propriétaire.
+
+b) Ajouter un constructeur permettant d'initialiser les propriétés.
+
+====== II ) Créer une classe Ticket
+
+a) Ajouter les proriétés suivantes ;
+- une reference vers une voiture.
+- l'heure de la création du ticket => utiliser DateTime pour cette propriété (classe disponible dans System)
+
+b) Ajouter un constructeur permettant d'initialiser les propriétés.
+la variable d'heure de création est initialisé avec DateTime.Now.
+
+====== III ) Créer une classe Parking
+
+a) Ajouter les proriétés suivantes ;
+- collection de Car.
+- prix d'une heure.
+- argent gagné dans la journée.
+
+b) Ajouter un constructeur permettant d'initialiser les propriétés.
+Attention de verifier les paramètres pour empecher les erreurs.
+L'argent gagné est toujours initialisé à zéro.
+
+c) Ajouter une fonction qui permet d'ajouter une Car dans le parking (ajout ds collection).
+La fonction doit verifier qu'il y a bien de la place disponible.
+
+d) Ajouter une fonction qui supprime une voiture du parking (suppression de la collection).
+
+f) Ajouter une fonction qui retourne le nombre de places disponibles.
+
+g) Ajouter une fonction qui permet d'ajouter de l'argent dans la variable de l'argent gagné. 
+La fonction prend en paramètre une variable de type DateTime.
+Calcul le temps passé depuis ce paramètre et maintenant.
+Et calcul l'argent gagné en fonction du prix de l'heure.
+Ajoute ensuite l'argent gagné.
+
+h) Ajouter une fonction qui permet d'afficher l'état du parking.
+Affiche toutes les places de parking avec leur numéro et le nom de la personne à cette place.
+
+====== IV ) Créer une classe Clients
+
+a) Ajouter les proriétés suivantes ;
+- une collection de Ticket
+
+b) Ajouter une fonction qui permets de retourner de manière aléatoire un ticket de la collection.
+
+c) Ajouter une fonction qui prend en entrée un Car, et qui ajoute un nouveau Ticket dans la collection.
+
+d) Ajouter une fonction qui prend en entrée un Ticket, et qui le supprime de la collection.
+
+====== V ) Créer un programme dans Main
+
+a) Le programme intialise :
+- une instance de la classe Parking
+- une instance de la classe Clients
+
+
+b) Le programme propose ensuite 4 options à l'utilisateur:
+1 - Ajouter une voiture au parking
+2 - Retirer une voiture du parking
+3 - Afficher toutes les places et qui prend chaque place
+4 - Terminer la journée
+
+=> récupérer la proposition de l'utilisateur et faite le comportement souhaité dans les consignes qui suivent.
+Attention :
+- si l'utilisateur ne rentre pas une bonne option on redemande.
+- lorsque l'option a fini de s'éxécuter on repropose les options, sauf si c'est l'option 4 qui a été choisi.
+- Afficher en plus le nombre de place disponibles dans le parking et le nombre de tickets existant.
+
+c) Option 1, le programme fait :
+- demande le nom de l'utilisateur.
+- creer une voiture.
+- ajouter la voiture dans le parking.
+- créer un nouveau ticket dans clients.
+
+
+d) Option 2, le programme fait :
+- Prend un ticket random dans clients.
+- Supprime la voiture du ticket du parking.
+- Ajoute l'argent gagné en fonction du temps dans le parking.
+- Affiche le nom du proriétaire et combien il doit payer.
+- Supprime le ticket de client.
+
+
+e) Option 3 - le programme fait :
+Affiche toutes les places du parking avec le numéro de la place et le nom du propriétaires de la voiture.
+
+
+f) Option 4 - le programme fait :
+- On sort de la boucle si cette option est choisie.
+- On affiche un message de fin qui doit contenir combien le parking à gagner en cette fin de journée.
