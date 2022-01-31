@@ -1,0 +1,21 @@
+1 - Creer une classe Shape
+2 - Ajouter à la classe shape les fonctions virtual Area et Perimeter
+- Area retournant l'air de la shape.
+- Perimeter retournant le perimetre de la shape.
+Ici il n'y a pas de corps de fonction, et donc elles retournent toutes les deux 0;
+3 - Definir les trois classes Square, Rectangle et Circle
+4 - Les faire toutes hériter de la classe Shape.
+5 - Ajouter les propriétés nécessaires à chaque classe
+- Square : width
+- Rectangle : width et heigth
+- Circle : radius
+6 - Implementer dans chaque classe les methodes Area et Perimeter.
+7 - Surcharger et Implementer les fonctions ToString de chaque classe.
+8 - Ajouter aux classes Rectangle et Square la fonction Diagonal qui retourne la valeur de la diagonale de la forme.
+9- Ajouter à la class Circle la fonction Diameter qui retourne la valeur du diametre;
+10 - Creer un tableau de shape en l'initialisant avec des instances des trois classes filles
+11 - Creer une boucle pour parcourir tout le tableau et Appeller les differentes méthodes pour chaque instance.
+12 - Dans la boucle tester si les instances sont de type Square ou Rectangle avec le mot clefs 'is'
+ => si oui appeler la fonction Diagonal et afficher le resultat.
+13 - Dans la boucle tester si les instances sont de type Circlea avec le mot clefs 'is'
+ => si oui appeler la fonction Diameter et afficher le resultat
