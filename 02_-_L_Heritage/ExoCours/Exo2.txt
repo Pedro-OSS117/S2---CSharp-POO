@@ -1,0 +1,23 @@
+Exercice 6.1.3 des employés
+Une entreprise a un certain nombre d’employés. Un employé est connu par son nom, son matricule
+(qui l’identifie de façon unique) et son indice salairial. Le salaire est calculé en multipliant cet indice
+par une certaine valeur qui peut changer en cas d’augmentation générale des salaires, mais qui est la
+même pour tous les employés.
+
+Question 1
+Ecrivez la classe des employés avec les informations utiles et des méthodes pour afficher les
+caractéristiques d’un employé et pour calculer son salaire.
+Question 2
+Certains employés ont des responsabilités hiérarchiques. Ils ont sous leurs ordres d’autres employés. Ecrivez une sous-classe des employés qui représente ces responsables en enregistrant leurs
+inférieurs hiérarchiques directs dans un tableau.
+Ecrivez une méthode qui affiche les inférieurs directs (placés directement sous leurs ordres) et
+une autre qui affiche les employés inférieurs directs ou indirects (c’est à dire les subordonnés des
+subordonnés). On suppose que la hiérarchie de l’entreprise en pyramidale.
+Question 3
+Les commerciaux ont un salaire composé d’un fixe et d’un intéressement proportionnel à leurs
+ventes. Ecrivez une sous-classe des commerciaux qui contient l’information sur leurs ventes du dernier
+mois, une méthode pour mettre à jour cette information et redéfinissez la méthode de calcul de leurs
+salaires.
+Question 4
+Ecrivez une classe représentant tout le personnel de l’entreprise, avec une méthode calculant la
+somme des salaires à verser.
