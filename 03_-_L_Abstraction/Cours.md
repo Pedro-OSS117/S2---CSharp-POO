@@ -10,8 +10,7 @@ References :
 
 L'abstraction permet d'élaborer un concept sous forme de classe qui ne pourrat pas être instancier.
 Le concept définis des comportements (méthodes) mais ne les implémentes pas.
-Ensuite des classes representant des cas concrets deriverons de ce concept et
-ce concept, par le principe d'abstraction imposera à toutes ses filles l'__obligation d'implémenter toutes__ les méthodes de la mère.
+Ensuite des classes representant des cas concrets deriverons de ce concept, par le principe d'abstraction imposera à toutes ses filles l'__obligation d'implémenter toutes__ les méthodes de la mère.
 
 Pour empêcher l’instanciation directe, vous pouvez déclarer une classe comme étant abstract à l’aide du mot clef abstract.
 Une classe abstraite ne peut être utilisée que si une nouvelle classe en est dérivée. Une classe abstraite peut contenir une ou plusieurs signatures de méthode qui sont également déclarées comme abstraites. Ces signatures spécifient les paramètres et la valeur de retour, mais n’ont aucune implémentation (corps de méthode). Une classe no abstraite ne doit pas contenir de membres abstraits ; Toutefois, si une classe contient un membre abstrait, la classe elle-même doit être déclarée comme abstraite. Les classes dérivées qui ne sont pas abstraites elles-mêmes doivent fournir l’implémentation pour toutes les méthodes abstraites d’une classe de base abstraite. 
@@ -41,6 +40,11 @@ public abstract class A
 
 public class B : A // Generates CS0534.
 {
+    public override void Method1()
+    {
+    
+    }
+    
     public void Method3()
     {
         // Do something.
