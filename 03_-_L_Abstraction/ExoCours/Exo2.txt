@@ -3,7 +3,7 @@ Pour cela on a proposé d’organiser les objets de l’application en deux cat�
 Les classes CompteSurCarnet et CompteSurCheque ont des propriétés communes telles que Numéro et NomProprietaire et Solde qui donnent naissance à une troisième classe Compte 
 considérée comme classe de base pour éviter les redondances.
 
-La classe CompteSurCarnet possède, en plus des propriétés communes, la propriété NuméroCanret. 
+La classe CompteSurCarnet possède, en plus des propriétés communes, la propriété NuméroCarnet. 
 La classe CompteSurCheque est caractérisée par le NuméroChèque et le NuméroCarte ainsi que DateFinValiditéCarte.
 
 1) Définir la classe abstraite AbstractCompte avec deux constructeurs (par défaut et d’initialisation) et les accesseurs.
