@@ -15,11 +15,10 @@ La classe CompteSurCheque est caractérisée par le NuméroChèque et le Numéro
 
 3) Définir la classe CompteSurCarnet avec deux constructeurs (par défaut et d’initialisation) et les accesseurs.
          a. Redéfinir la méthode créditer qui prend en paramètre la somme à ajouter au solde.
-         b. redéfinir la méthode Débiter qui prend en paramètre la somme à retirer du compte qui ne doit pas dépasser le solde sinon une exception est générée avec le message : « Solde insuffisant », en plus la somme à retirer ne doit pas dépasser un plafond de 10000Dh sinon une exception est générée avec le message : « Plafond dépassé ». 
+         b. redéfinir la méthode Débiter qui prend en paramètre la somme à retirer du compte qui ne doit pas dépasser le solde sinon une exception est générée avec le message : « Solde insuffisant », 
+		 en plus la somme à retirer ne doit pas dépasser un plafond de 10000Dh sinon une exception est générée avec le message : « Plafond dépassé ». 
 
 4) Définir la classe Banque contenant une collection de comptes (CompteSurCheque et CompteSurCarnet) et ajouter les méthodes suivantes :
          a. rechercher : qui prend en paramètre un numéro et retourne l’indice du compte dans la collection ou -1 s’il n’existe pas.
          b. AjouterCompteCarnet : qui prend les paramètres nécessaires à la création d’un compte sur carnet et de l’ajouter à la collection (vérifier que le numéro n’existe pas déjà avant de l’ajouter).
          c. AjouterCompteCheque : qui prend les paramètres nécessaires à la création d’un compte sur chèque et de l’ajouter à la collection (vérifier que le numéro n’existe pas déjà avant de l’ajouter).
-         d. Supprimer : qui prend en paramètre un numéro et supprime le compte correspondant.
-         e. La propriété Elément : qui prend en paramètre un numéro et retourne le compte correspondant à ce numéro.

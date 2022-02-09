@@ -13,26 +13,20 @@ namespace Exo2
             _numeroCarnet = numeroCarnet;
         }
 
-        public override void Crediter(float montant)
-        {
-            _solde += montant;
-        }
-
         public override void Debiter(float montant)
         {
+            base.Debiter(montant);
+
             if(_plafond < montant)
             {
                 Console.WriteLine("Plafond depassé!");
                 return;
             }
+        }
 
-            if(_solde < montant)
-            {
-                Console.WriteLine("Solde Insufisant!");
-                return;
-            }
-
-            _solde -= montant;
+        public override string ToString()
+        {
+            return base.ToString() + $"\nNumero Carnet : {_numeroCarnet}\nPlafond : {_plafond}";
         }
     }
 }

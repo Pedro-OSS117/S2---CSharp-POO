@@ -14,20 +14,9 @@ namespace Exo2
             _dateInvaliditeCarte = dateInvaliditeCarte;
         }
 
-        public override void Crediter(float montant)
+        public override string ToString()
         {
-            _solde += montant;
-        }
-
-        public override void Debiter(float montant)
-        {
-            if(_solde < montant)
-            {
-                Console.WriteLine("Solde Insufisant!");
-                return;
-            }
-
-            _solde -= montant;
+            return base.ToString() + $"\nNumero Cheque : {_numeroCheque}\nNumero Carte : {_numeroCarte}\nDate Invalidité Carte : {_dateInvaliditeCarte}";
         }
     }
 }
