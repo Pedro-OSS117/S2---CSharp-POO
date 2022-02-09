@@ -1,0 +1,106 @@
+================== Règles =====================
+. A Rendre dans un dossier DM dans le dossier 03_-_L_Abstraction de votre Git.
+. Doit être sur vos GitHub avant 10h Lundi 08 Mars sinon 0.
+. -1 points à chaque erreur de nomenclature.
+. -5 si pas de commentaires et -2 si les commentaires ne sont pas exaustifs
+. 0 sur l'exo si le programme ne compile pas.
+. note exo divisée par 2 si l'exo plante à l'éxécution.
+
+================= Gestion de Convoi de véhicules ==================
+
+Une entreprise développe un moteur à huile et dote plusieurs véhicules de ce moteur.
+Avant d'effectuer des tests grandeur nature, l'entreprise conçoit un programme de simulation du comportement des véhicules.
+Le programme doit proposer une représentation des véhicules et du calcul de la vitesse maximum pouvant être atteinte par véhicule.
+
+Tout véhicule possède une immatriculation (propre à chaque véhicule) et un poids à vide (propre à chaque type de véhicule).
+Certains véhicules peuvent transporter un chargement. On appelle alors charge le poids de ce chargement. 
+La charge d'un véhicule ne doit pas dépasser un certain poids, que l'on appelera charge maximale, dépendant du type de véhicule.
+
+Les différents types de véhicules dotés du fameux moteur sont les suivants : les petits bus, les camions citernes, et les camions bachés.
+
+- un petit bus a un poids à vide de 4 tonnes, et peut atteindre une vitesse maximale de 150 km/h.
+Il ne possède pas de chargement (le poid des passagers est concidéré comme négligeable par rapport au poid à vide).
+
+- un camion citerne a un poids à vide de 3 tonnes et une charge maximale de 10 tonnes. 
+Sa vitesse maximale dépend de son poids total :
+130 km/h si le poids total est de 3 tonnes.
+110 km/h si le poids total est superieur à 3 tonnes et inferieur ou égal à 4 tonnes.
+90 km/h si le poids total est superieur à 4 tonnes et inferieur ou égal à 7 tonnes.
+80 km/h si le poids total est supérieur à 7 tonnes.
+
+- un camion baché a un poids à vide de 4 tonnes et une charge maximum de 20 tonnes. Sa vitesse maximale dépend également de sa charge
+(mais à charge égale, un camion citerne a une vitesse maximale plus faible, car le liquide qu'il transporte est plus instable qu'un chargement soldie) :
+130 km/h si le poids total est de 4 tonnes.
+110 km/h si le poids total est superieur à 4 tonnes et inferieur ou égal à 7 tonnes.
+90 km/h si le poids total est superieur à 7 tonnes et inferieur ou égal à 11 tonnes.
+80 km/h si le poids total est supérieur à 11 tonnes et inferieur ou égal à 14 tonnes.
+70 km/h si le poids total est supérieur à 14 tonnes.
+
+I - Représentation des véhicules
+
+Ecrire une hiérarchie de classes permettant de représenter les différents types de véhicules.
+
+1) La classe Vehicule est la classe de base. Elle possède trois attributs, le numéro d'immatriculation du véhicule, la vitesse maximale et le poids à vide.
+
+2) Les différents types de véhicules sont PetitBus, CamionBache et CamionCiterne et héritent de la classe Vehicule.
+CamionBache et CamionCiterne héritent d'une classe intermediaire Camion. 
+Camion et Vehicule sont abstraites et possède deux attributs charge et charge maximale.
+
+3) Le poids à vide sera initialisé pour chaque vehicule dans le constructeur.
+
+4) La hierarchie fournira les méthodes publiques suivantes :
+- un constructeur pour chaque classe. A sa création, un véhicule reçoit un numéro d'immatriculation.
+
+- une méthode ToString() qui retourne une chaine de caractère décrivant un véhicule avec les éléments suivants :
+l'immatriculation, le poids à vide et, le cas échéant, la charge maximale et la charge du véhicule.
+
+- une méthode SetCharge(int charge) pour les camions permettant de modifier le  poids du chargement.
+
+- La vitesse maximale à vide d'un véhicule doit être calculée lors de sa création, on considère alors que la valeur de la charge est 0 si c'est un camion.
+Cette vitesse maximale doit être recalculée à chaque fois que l'on change le chargement d'un véhicule.
+
+- une méthode protected abstraite PoidsTotal() dans Vehicule qui retourne le poid total (en fonction de la charge si c'est un camion).
+- Une méthode protected abstraite CacluleVitesseMax() déclarée dans la classe Camion qui permet de calculer la vitesse max en fonction du chargement.
+Cette methode doit être appelée lorsqu'on modifie la charge pour setter la vitesse max du vehicule.
+
+II Representation d'un convoi
+
+On s'intéresse maintenant à la définition d'une classe Convoi, permettant de gérer un convoi de véhicules.
+Cette classe doit savoir calculer la vitesse maximale d'une convoi, sachant que cette vitesse correspond à la plus petite des vitesses maximales des véhicules du convoi.
+
+1) La classe convoi comporte un attribut de type List qui contiendra tous les vehicules du convoi.
+
+2) Ecrire les méthodes suivantes : 
+- un constructeur qui initialise la liste de vehicules.
+- une fonction ToString permettant d'afficher tous les véhicules du convoi avec leurs propriétés.
+- une fonction AjouterVehicule qui ajoute un vehicule au convoi.
+- une fonction AjouterConvoi qui ajoute les vehicule d'un autre convoi au convoi.
+- un fonction qui retourne la vitesse maximum du convoi.
+
+III Programme de simulation d'un convoi
+
+On veut maintenant tester nos Classes avec une application qui permet de creer et de modifier un convoi.
+Il faut que n'autre programme gère les erreurs possibles de l'utilisateur.
+
+1) Le programme propose les 4 options suivantes et boucle tant que l'utilisateur ne choisi pas l'option 4:
+
+1 - Ajouter Vehicule,
+2 - Afficher tous les Vehicules , 
+3 - Afficher vitesse Max , 
+4 - Terminer Programme
+
+2) Si l'utilisateur choisi l'option 1, le programme propose de choisir entre les 3 types Vehicules Petit Bus, Camion Citerne, Camion Baché.
+Ensuite le programme demande d'entrer l'immatriculation du vehicule.
+Si l'utilisateur a choisi un camion, le programme demande la charge du camion et verifie si la proposition ne dépasse pas la charge max.
+Ensuite le programme ajoute le vehicule au convoi.
+
+3) Si l'utilisateur choisi l'option 2
+On affiche la liste de tous les véhicules.
+
+4) Si l'utilisateur choisi l'option 3
+On affiche la vitesse maximale courante du convoi.
+
+5) Si l'utilisateur choisi l'option 4
+On remercie l'utilisateur d'avoir tester notre programme et on termine le programme.
+
+
