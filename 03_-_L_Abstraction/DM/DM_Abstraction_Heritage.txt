@@ -1,6 +1,6 @@
 ================== Règles =====================
 . A Rendre dans un dossier DM dans le dossier 03_-_L_Abstraction de votre Git.
-. Doit être sur vos GitHub avant 10h Lundi 08 Mars sinon 0.
+. Doit être sur vos GitHub avant 10h Mardi 15 Fevrier sinon 0.
 . -1 points à chaque erreur de nomenclature.
 . -5 si pas de commentaires et -2 si les commentaires ne sont pas exaustifs
 . 0 sur l'exo si le programme ne compile pas.
